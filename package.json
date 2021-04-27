@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^5.2.4",
+    "eslint": "^7.25.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "mini-css-extract-plugin": "^1.5.0",
     "style-loader": "^2.0.0",
