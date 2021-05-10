@@ -12,7 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, "./dist"),
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".tsx", ".js"],
   },
   module: {
     rules: [
@@ -40,7 +40,8 @@ module.exports = {
         exclude: path.resolve(__dirname, "node_modules"),
       },
       {
-        test: /\.ts$/,
+        // 同时匹配 ts，tsx 后缀的 TypeScript 源码文件
+        test: /\.tsx?$/,
         loader: "awesome-typescript-loader",
       },
     ],
