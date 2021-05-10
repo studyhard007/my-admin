@@ -17,21 +17,35 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: "css-loader" },
+          { loader: "sass-loader" },
+        ],
+      },
+      {
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, { loader: "css-loader" }],
       },
+      // {
+      //   test: /\.scss$/, // 增加对 SCSS 文件的支持
+      //   use: ["style-loader", "css-loader", "sass-loader"],
+      // },
+
       {
         test: /\.js$/,
         use: ["babel-loader"],
+        // 排除 node_modules 目录下的文件，node_modules 目录下的文件都是采用的 ES5 语法，没必要再通过 Babel 去转换
+        exclude: path.resolve(__dirname, "node_modules"),
       },
       {
         test: /\.ts$/,
         loader: "awesome-typescript-loader",
       },
     ],
-    
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [new MiniCssExtractPlugin({ filename: "[name].css" })],
   devServer: {
     open: false,
   },
