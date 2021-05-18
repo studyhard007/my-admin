@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://my-admin/./main.css","webpack://my-admin/./index.scss"],"names":[],"mappings":"AAAA;EACE,iBAAiB;AACnB,C;ACDA;EACE,cAFY","file":"main.css","sourcesContent":["#app {\r\n  text-align: right;\r\n}","$blue: #1875e7;\r\ndiv {\r\n  color: $blue;\r\n}\r\n"],"sourceRoot":""}
