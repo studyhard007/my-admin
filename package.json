@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --open --config webpack.config.js",
+    "start": "http-server dist",
     "server": "node server.js"
   },
   "author": "",
@@ -15,18 +15,24 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.2.6",
     "csv-loader": "^3.0.3",
+    "exports-loader": "^3.0.0",
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.2",
+    "http-server": "^0.12.3",
+    "imports-loader": "^0.8.0",
     "style-loader": "^2.0.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^4.3.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^4.2.2",
+    "workbox-webpack-plugin": "^6.1.5",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.21",
+    "whatwg-fetch": "^3.6.2"
   }
 }
